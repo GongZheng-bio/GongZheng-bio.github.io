@@ -12,10 +12,10 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "contrast" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "zh-CN" # "en-US" (default), "zh-CN", "zh-TW", "ja", "ko", etc.
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
 title                    : "生信知识分享"
 title_separator          : "-"
@@ -113,11 +113,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "龚政"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  bio              : "生物信息学-研究生-知识记录"
+  location         : "中国-广州"
+  email            : "1329457912@qq.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -165,6 +165,7 @@ footer:
 include:
   - .htaccess
   - _pages
+  - 知识库
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -218,6 +219,11 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+
+collections:
+  知识库:
+    output: true
+    permalink: /:collection/:path/
 
 
 # Sass/SCSS
@@ -324,3 +330,16 @@ defaults:
       comments: # true
       share: true
       related: true
+  # 知识库
+  - scope:
+      path: ""
+      type: 知识库
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      toc_sticky: true
+      sidebar:
+        nav: "知识库"
